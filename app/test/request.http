@@ -1,0 +1,165 @@
+// Account
+POST https://task-tupt.herokuapp.com/accounts
+Content-Type: application/json
+
+{
+    "email": "admin@mail.com",
+    "password": "111111",
+    "role": "admin",
+    "name": "Phan Thanh Tu",
+    "avatar": "",
+    "active": 1
+}
+
+###
+
+GET http://localhost:3000/accounts
+
+###
+
+GET http://localhost:3000/accounts/2
+
+###
+
+PUT http://localhost:3000/accounts/1
+Content-Type: application/json
+
+{
+    "email": "admin@mail.com",
+    "password": "111111",
+    "role": "admin",
+    "name": "Phan Thanh Tuuuu",
+    "avatar": "",
+    "active": 1
+}
+
+###
+DELETE http://localhost:3000/accounts/1
+
+###
+DELETE http://localhost:3000/accounts/
+
+
+###
+// Project
+POST https://task-tupt.herokuapp.com/projects
+Content-Type: application/json
+
+{
+    "name": "Project 3",
+    "description": "This is a new project of the year 2020",
+    "date": "2020-03-20",
+    "due": "2020-04-19",
+    "creator": 22,
+    "assignee": 13
+}
+
+###
+GET http://localhost:3000/projects
+
+###
+GET http://localhost:3000/projects/1
+
+###
+PUT http://localhost:3000/projects/1
+Content-Type: application/json
+
+{
+    "name": "Project 1",
+    "description": "This is the first updated project of the company.",
+    "date": "2020-03-05",
+    "due": "2020-03-19",
+    "creator": 3,
+    "assignee": 4
+}
+
+###
+DELETE http://localhost:3000/projects/1
+
+###
+DELETE http://localhost:3000/projects
+
+###
+// Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "projectId": 1,
+    "source": "New",
+    "name": "Test",
+    "detail": "This is the detail of the task 2",
+    "status": 0,
+    "date": "2020-3-16",
+    "due": "2020-3-19",
+    "creator": 3,
+    "assignee": 44,
+    "request": 0
+}
+
+###
+
+GET http://localhost:3000/tasks
+
+###
+GET http://localhost:3000/tasks/1
+
+###
+PUT http://localhost:3000/tasks/2
+Content-Type: application/json
+
+{
+    "projectId": 1,
+    "source": "New",
+    "name": "Task 2 ne",
+    "detail": "This is the detail of the task 2",
+    "status": "Open",
+    "date": "2020-3-16",
+    "due": "2020-3-19",
+    "creator": 3,
+    "assignee": 4,
+    "commitDate": "2020-3-17",
+    "commitNote": "Completed!"
+}
+
+###
+DELETE http://localhost:3000/tasks/3
+
+###
+DELETE http://localhost:3000/tasks
+
+// Auth
+###
+POST https://task-tupt.herokuapp.com/auth
+Content-Type: application/json
+
+{
+    "email": "manager@mail.com",
+    "password": "111111"
+}
+
+###
+POST http://localhost:3000/groups
+Content-Type: application/json
+
+{
+    "name" : "test group nua ne",
+    "managerId": 72,
+    "memberId": 82
+}
+
+###
+PUT http://localhost:3000/tasks/r/152
+Content-Type: application/json
+
+{
+    "request": 2
+}
+
+###
+POST http://localhost:3000/message
+Content-Type: application/json
+
+{
+    "message": "abc"
+}
